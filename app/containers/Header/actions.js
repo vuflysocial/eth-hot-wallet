@@ -67,16 +67,32 @@ export function loadNetworkSuccess(blockNumber) {
  * @return {object} An action object with a type of LOAD_NETWORK_ERROR passing the error
  */
 export function loadNetworkError(error) {
-  if (error !== offlineModeString) {
-    const err = error.indexOf('Invalid JSON RPC response from host provider') >= 0 ?
-      `${error}, Check Internet connection and connectivity to RPC` : error;
-    message.error(err, 10);
-  }
-  return {
-    type: LOAD_NETWORK_ERROR,
-    error,
-  };
+  return new Promise((resolve) => {
+    if (error !== offlineModeString) {
+      const err = error.indexOf('Invalid JSON RPC response from host provider') >= 0 ?
+        `${error}, Check Internet connection and connectivity to RPC` : error;
+      const closeListener = () => {
+        resolve({
+          type: LOAD_NETWORK_ERROR,
+          error,
+        });
+        message.destroy(); // destroy the message to prevent it from being shown again
+        message.config({
+          duration: 10, // reset duration to default
+        });
+      };
+      const key = message.error(err, 10, closeListener); // add event listener to the close button
+      message.update(key, err, 0); // update the message to remove the "X" button that doesn't work
+    } else {
+      resolve({
+        type: LOAD_NETWORK_ERROR,
+        error,
+      });
+    }
+  });
 }
+
+
 
 
 /* *********************************** Check Balances Actions ******************* */

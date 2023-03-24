@@ -14,8 +14,8 @@ import { StickyFooter } from './sticky';
 
 const Footer = StickyFooter.extend`
   textAlign: center;
-  background: #efeeee;
-  color: #5a5a5a;
+  background: #333;
+  color: #333;
   padding: 10px;
   font-size: 14px;
 `;
@@ -30,20 +30,20 @@ function PageFooter() {
     <Footer>
       <Row>
         <Col sm={12} xs={24}>
-          {'ETH Hot Wallet - '}
+          {'Melo Wallet - '}
           <a href={github} target="_blank" rel="noopener">
-            Ethereum Wallet with ERC20 support (GitHub)
+            Melo Wallet | (MeloInu)
           </a><br />
-          Created using: eth-lightwallet, React.js, Ant design...
+          
         </Col>
 
         <Span>
           <Col sm={12} xs={24}>
-            <a href="https://medium.freecodecamp.org/how-to-build-an-ethereum-wallet-web-app-ac77dcaac573" target="_blank" rel="noopener">
-            How to build an Ethereum Wallet guide
+            <a href="https://meloinu.herokuapp.com" target="_blank" rel="noopener">
+           
             </a>
             <br />
-            ETH: 0x97325941fafde5a182e6f7e5475a592ac615a3f2
+          Melo Inu  BSC: 0x5c12C812794B874fe4Fdea9A4960df599C89b8E5
           </Col>
         </Span>
 

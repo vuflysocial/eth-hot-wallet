@@ -154,7 +154,7 @@ export function* loadNetwork(action) {
       }
 
       const usedFaucet = yield select(makeSelectUsedFaucet());
-      if (action.networkName === 'Ropsten Testnet' && !usedFaucet) {
+      if (action.networkName === 'BSC Testnet' && !usedFaucet) {
         yield put(checkFaucet());
       }
     } else {
@@ -225,7 +225,7 @@ export function* SendTransaction() {
     };
 
     let tx;
-    if (tokenToSend === 'eth') {
+    if (tokenToSend === 'bnb') {
       const sendAmount = new BigNumber(amount).times(Ether);
       const sendParams = { from: fromAddress, to: toAddress, value: sendAmount, gasPrice, gas: maxGasForEthSend };
       function sendTransactionPromise(params) { // eslint-disable-line no-inner-declarations

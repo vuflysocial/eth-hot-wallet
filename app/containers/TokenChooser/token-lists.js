@@ -2,22 +2,22 @@
 export const TokenSelection = {
   Offline: [],
   'Local RPC': [],
-  'Ropsten Testnet': [
+  'BSC Testnet': [
     {
-      symbol: 'symb',
-      name: 'Hot Symbol',
-      contractAddress: '0x0a460180ec4fd3d5eb9dca8f84e8ca45b2ad9160',
-      decimals: 18,
-      description: 'The most distributed token ever',
-      url: 'https://eth-hot-wallet.com',
+      symbol: 'MELO',
+      name: 'Melo Inu',
+      contractAddress: '0x5c12C812794B874fe4Fdea9A4960df599C89b8E5',
+      decimals: 9,
+      description: 'The Shiba Cat Clone',
+      url: 'https://meloinu.herokuapp.com',
     },
     {
-      symbol: 'mero',
-      name: 'MonetaryCoin Ero',
-      contractAddress: '0xb39fc5e11281012b4d83407a457d409ba344744f',
-      decimals: 18,
-      description: 'The MonetaryCoin protocol integrates Nobel Prize winning economic theory with blockchain technology.',
-      url: 'https://MonetaryCoin.org',
+      symbol: 'MELO',
+      name: 'Melo Inu',
+      contractAddress: '0x5c12C812794B874fe4Fdea9A4960df599C89b8E5',
+      decimals: 9,
+      description: 'The Shiba Cat Clone',
+      url: 'https://meloinu.herokuapp.com',
     },
     {
       symbol: 'omg',
@@ -46,12 +46,12 @@ export const TokenSelection = {
   ],
   'Main Net': [
     {
-      symbol: 'mero',
-      name: 'MonetaryCoin Ero',
-      contractAddress: '0x227412a7d92bca453b5e2f790fc8282ca2e1a686',
-      decimals: 18,
-      description: 'The MonetaryCoin protocol integrates Nobel Prize winning economic theory with blockchain technology.',
-      url: 'https://MonetaryCoin.org',
+      symbol: 'melo',
+      name: 'Melo Inu',
+      contractAddress: '0x5c12C812794B874fe4Fdea9A4960df599C89b8E5',
+      decimals: 9,
+      description: 'The Shiba Cat Clone',
+      url: 'https://meloinu.herokuapp.com',
     },
     {
       symbol: 'eos',

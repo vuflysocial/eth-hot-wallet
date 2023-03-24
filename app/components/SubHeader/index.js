@@ -38,10 +38,10 @@ function SubHeader(props) {
 
   const noWalletSubHeader = [
     <Button key="new_wallet" type="primary" size="large" onClick={onGenerateWallet}>
-      New wallet
+      New Melo
     </Button>,
     <Button key="restore_wallet" type="default" size="large" onClick={onShowRestoreWallet}>
-      Restore wallet
+      Restore Melo
     </Button>,
     /* optional laod / save buttons
      <IconButton

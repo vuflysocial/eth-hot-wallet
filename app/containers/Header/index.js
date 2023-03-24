@@ -74,7 +74,7 @@ function Header(props) {
 
   return (
     <HeaderWrapped className="clearfix">
-      <Row type="flex" align="middle" justify="space-between" style={{ backgroundColor: '#fff' }}>
+      <Row type="flex" align="middle" justify="space-between" style={{ backgroundColor: '#333' }}>
         <Col sm={{ span: 6, offset: 1 }} xs={24}>
           <Logo />
         </Col>
